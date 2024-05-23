@@ -33,15 +33,15 @@
         </tr>
     </thead>
 
-    <tbody>
+    <tbody *ngFor="let contatos of contatos">
         <tr>
             <td>
                 <img src="../../assets/images/Ativo.png"alt="" style="height: 20px; width: 20px;">
                 <img src="../../assets/images/Inativo.png" alt="" style="height: 20px; width: 20px;">
             </td>
             <td></td>
-            <td>Carlos</td>
-            <td>1616161616</td>
+            <td>{{contatos.Name}}</td>
+            <td>{{contatos.Mobile}}</td>
             <td><button class="btn btn-danger">Excluir</button>
                  <button class="btn btn-warning">Editar</button>
             </td>

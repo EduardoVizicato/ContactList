@@ -76,7 +76,8 @@
               "buildTarget": "ContactList:build:production"
             },
             "development": {
-              "buildTarget": "ContactList:build:development"
+              "buildTarget": "ContactList:build:development",
+              "proxyConfig": "proxy.config.js"
             }
           },
           "defaultConfiguration": "development"

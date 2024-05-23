@@ -4,12 +4,13 @@ import { CadastroComponent } from '../cadastro/cadastro.component';
 import { ContatoService } from '../services/contato.service';
 import { Contact } from '../models/Contact';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NgFor } from '@angular/common';
 
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [RouterLink,CadastroComponent, HttpClientModule],
+  imports: [RouterLink,CadastroComponent, HttpClientModule, NgFor],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })
@@ -23,6 +24,13 @@ export class HomepageComponent implements OnInit{
   ngOnInit(): void {
     this.contatctService.GetContact().subscribe(data =>{
       console.log(data)
+
+      data.map((item)=>{
+        console.log(item)
+      });
+
+      this.contatos = data;
+      this.contatosGeral = data;
     });
   }
 }
