@@ -1,6 +1,6 @@
 export interface Contact{
-    //Id? : Guid
-    Name : string,
-    Mobile : number,
-    IsActive: boolean
+    id: string,
+    name : string,
+    mobile : number,
+    isactive: boolean
 }
