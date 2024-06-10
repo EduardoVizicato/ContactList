@@ -16,4 +16,8 @@ export class ContatoService {
   GetContact() : Observable<Contact[]>{
       return this.http.get<Contact[]>(this.ApiUrl);
   }
+
+  CreateContact(contato : Contact) : Observable<Contact[]>{
+      return this.http.post<Contact[]>(`${this.ApiUrl}`, contato);
+  }
 }

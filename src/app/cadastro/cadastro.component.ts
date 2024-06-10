@@ -37,5 +37,10 @@ export class CadastroComponent implements OnInit {
 
   submit(){
     console.log(this.contatoForm.value)
+    this.onSubmit.emit(this.contatoForm.value);
+  }
+
+  createContato(contato: Contact){
+    
   }
 }
