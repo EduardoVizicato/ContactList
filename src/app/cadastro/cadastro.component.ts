@@ -15,7 +15,7 @@ import { Contact } from '../models/Contact';
 })
 export class CadastroComponent implements OnInit {
 
-  @Output() onSubmit = new EventEmitter<Contact>();
+
 
   contatoForm! : FormGroup;
 
@@ -25,22 +25,6 @@ export class CadastroComponent implements OnInit {
   
   ngOnInit(): void {
     
-  this.contatoForm = new FormGroup({
-    id: new FormControl(),
-    name: new FormControl(''),
-    mobile: new FormControl(''),
-    isactive: new FormControl(true)
-
-  });  
+  };  
   
-  }
-
-  submit(){
-    console.log(this.contatoForm.value)
-    this.onSubmit.emit(this.contatoForm.value);
-  }
-
-  createContato(contato: Contact){
-    
-  }
 }
