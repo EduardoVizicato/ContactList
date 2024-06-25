@@ -3,6 +3,7 @@ import { environment } from '../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Contact } from '../models/Contact';
+import { AddContactRequest } from '../models/AddContactRequest';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class ContatoService {
       return this.http.get<Contact[]>(this.ApiUrl);
   }
 
-  CreateContact(contato : Contact) : Observable<Contact[]>{
-      return this.http.post<Contact[]>(`${this.ApiUrl}`, contato);
+  CreateContact(contato : AddContactRequest) : Observable<AddContactRequest>{
+      return this.http.post<AddContactRequest>(`${this.ApiUrl}`, contato);
   }
 }
